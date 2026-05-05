@@ -1,0 +1,6 @@
+Package: RadianSysMemoryVault
+Type: Package
+Title: RadianSysMemoryVault
+Version: 0.1.0
+License: MIT
+Description: Build an R toolkit that studies memory behavior through framed sample traffic, with bounds and ordering tests and single-node deterministic mode.

@@ -59,3 +59,7 @@ foreach ($pathPattern in $knownPaths) {
 }
 
 Rscript tests/test_policy.R
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-radian-sys-memory-detail.ps1
+
+Rscript tests/test_domain_review.R

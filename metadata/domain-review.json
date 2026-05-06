@@ -1,0 +1,73 @@
+{
+  "repo": "radian-sys-memory-vault",
+  "language": "R",
+  "category": "Systems programming",
+  "goal": "Build an R toolkit that studies memory behavior through framed sample traffic, with bounds and ordering tests and single-node deterministic mode.",
+  "review_model": {
+    "terms": [
+      "allocation pressure",
+      "dirty state",
+      "guard slack",
+      "layout drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "allocation pressure",
+      "signal": 61,
+      "slack": 41,
+      "drag": 20,
+      "confidence": 70,
+      "score": 173,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "dirty state",
+      "signal": 76,
+      "slack": 47,
+      "drag": 8,
+      "confidence": 88,
+      "score": 263,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "guard slack",
+      "signal": 75,
+      "slack": 30,
+      "drag": 18,
+      "confidence": 55,
+      "score": 181,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "layout drift",
+      "signal": 88,
+      "slack": 44,
+      "drag": 17,
+      "confidence": 72,
+      "score": 241,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "allocation pressure",
+      "signal": 56,
+      "slack": 54,
+      "drag": 17,
+      "confidence": 64,
+      "score": 179,
+      "lane": "ship"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "repo": "radian-sys-memory-vault",
+  "language": "R",
+  "category": "Systems programming",
+  "goal": "Build an R toolkit that studies memory behavior through framed sample traffic, with bounds and ordering tests and single-node deterministic mode.",
+  "weights": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 4
+  },
+  "thresholds": {
+    "ship": 167,
+    "watch": 127
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
